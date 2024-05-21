@@ -1,0 +1,41 @@
+/*
+   Fundacion Kinal
+   Centro educativo tecnico laboral Kinal
+   Quinto perito
+   Quinto electronica
+   Codigo Tecnico: EB5AM / EB5AV 
+   Curso: Taller de electronica digital y reparacion de computadoras I
+   Proyecto: Uso de la pantalla LCD sin interfaz I2C
+   Dev: Manases Chitay
+   Fecha: 20 de mayo 
+   
+*/
+
+//Librerias
+#include <LiquidCrystal.h>
+
+
+//Definiciones de preprocesador
+#define RS  2
+#define Enable 3
+#define D4 4
+#define D5 5
+#define D6 6
+#define D7 7
+
+//Constructor
+LiquidCrystal LCD_Mani(RS, Enable, D4, D5, D6, D7); //Constructor que me permite usar la LCD
+
+
+void setup()
+{
+  LCD_Mani.begin(16,2); //Objeto de una LCD de 16 columnas x 2 filas
+  
+  LCD_Mani.setCursor(5,0);
+  LCD_Mani.print("Manases");
+  LCD_Mani.setCursor(5,5);
+  LCD_Mani.print("2023052");
+}
+void loop()
+{
+}
